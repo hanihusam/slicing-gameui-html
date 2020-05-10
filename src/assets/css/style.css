@@ -63,6 +63,9 @@ label {
 }
 
 /* Navbar */
+.navbar {
+  padding: 0 1rem;
+}
 .navbar p {
   color: #ffffff;
 }
@@ -138,18 +141,22 @@ nav ul {
   right: 0;
   top: 0;
   height: 100vh;
-  justify-content: space-evenly;
   flex-direction: column !important;
   background-color: #343a40;
-  width: 80%;
+  width: 100%;
   transform: translateX(100%);
   transition: all 1s;
   opacity: 0;
   z-index: -1;
+  padding-top: 60px;
 }
 nav ul.slide {
   transform: translateX(0);
   opacity: 1;
+}
+nav ul .nav-item {
+  padding: 15px;
+  border-bottom: thin solid #6e7582;
 }
 
 /* DESKTOP VERSION */
@@ -166,20 +173,27 @@ nav ul.slide {
     transform: unset;
     opacity: 1;
     z-index: auto;
+    padding: unset;
+  }
+  nav ul .nav-item,
+  .nav-item.outside {
+    padding: unset;
+    border-right: thin solid #6e7582;
+    border-bottom: unset;
   }
   .nav-link {
-    margin-right: 30px;
+    margin-right: 15px;
+    margin-left: 15px;
     margin-bottom: 0;
   }
   .hamburger {
     display: none;
   }
-  .nav-item.active .nav-link::after {
+  .nav-item.active::after {
     content: "";
     display: block;
     margin: auto;
     margin-bottom: -18px;
-    padding-bottom: 13px;
     border-bottom: 3px solid #ffd31d;
   }
 }
