@@ -1,3 +1,5 @@
 /files_needed
 /.vscode
 node_modules
+/dist
+/.cache
