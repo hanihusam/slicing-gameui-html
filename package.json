@@ -1,0 +1,15 @@
+{
+  "name": "slicing-html-game-ui",
+  "version": "1.0.0",
+  "description": "Slicing mockup game ui design to webpage",
+  "main": "./src/index.html",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "author": "Hani H.",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}
