@@ -1,25 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "./normalize.css";
 
-/* NORMALIZE */
+/* --------------------------
+:: 0.0 Custom Normalize CSS Start
+-------------------------- */
 * {
   margin: 0;
   padding: 0;
 }
-html,
 body {
   font-family: "Montserrat", sans-serif;
   color: #2222;
   background-color: #ffffff;
-  width: 100%;
-  height: 100%;
   font-size: 14px;
-  position: relative;
-  z-index: 1;
 }
-body > div,
-body > section,
-body > header,
-body > footer {
+body > * {
   overflow-x: hidden;
 }
 h1,
@@ -62,33 +57,27 @@ label {
   color: #232323;
 }
 
-/* Navbar */
+/* --------------------------
+:: 1.0 Navbar CSS Start
+-------------------------- */
 .navbar {
-  padding: 0 1rem;
+  padding: 0 0.3rem;
+  flex-wrap: nowrap;
+}
+.navbar-brand > img {
+  width: 120px;
+  height: auto;
 }
 .navbar p {
   color: #ffffff;
-}
-.navbar-collapse .nav-link {
-  margin-bottom: 5px;
 }
 .avatar {
   position: relative;
   width: 2rem;
   height: 2rem;
-  font-size: 0.75rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   font-weight: 400;
   color: #6e7582;
   text-align: center;
-  text-transform: uppercase;
-  vertical-align: bottom;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   background: #f1f3f8 no-repeat center/cover;
   background-image: url(../img/default-avatar.png);
   border-radius: 50%;
@@ -137,7 +126,7 @@ label {
   transform: rotate(-45deg) translate(-1px, 0);
 }
 nav ul {
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 0;
   height: 100vh;
@@ -159,41 +148,126 @@ nav ul .nav-item {
   border-bottom: thin solid #6e7582;
 }
 
-/* DESKTOP VERSION */
-/* Navbar */
-@media screen and (min-width: 992px) {
-  nav .nav-link {
-    margin-bottom: 0;
-  }
-  nav ul {
-    flex-direction: row !important;
-    position: unset;
-    height: auto;
-    width: auto;
-    transform: unset;
-    opacity: 1;
-    z-index: auto;
-    padding: unset;
-  }
-  nav ul .nav-item,
-  .nav-item.outside {
-    padding: unset;
-    border-right: thin solid #6e7582;
-    border-bottom: unset;
-  }
-  .nav-link {
-    margin-right: 15px;
-    margin-left: 15px;
-    margin-bottom: 0;
-  }
-  .hamburger {
-    display: none;
-  }
-  .nav-item.active::after {
-    content: "";
-    display: block;
-    margin: auto;
-    margin-bottom: -18px;
-    border-bottom: 3px solid #ffd31d;
-  }
+/* --------------------------
+:: 2.0 Main CSS Start
+-------------------------- */
+.main {
+  display: flex;
+  background: url(../img/light-bg.png) no-repeat;
+  background-size: cover;
+  background-position: 33%;
+  background-size: cover;
+  padding-top: 70px;
+  color: #fff;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -2;
+}
+.main .logo {
+  width: 50px;
+}
+/* --------------------------
+:: 2.1 Score Board CSS Start
+-------------------------- */
+.score-board {
+  display: flex;
+  padding-left: 30px;
+  justify-content: space-between;
+}
+.score-board img {
+  width: 40px;
+}
+.left-player {
+  margin-left: -60px;
+}
+.left-player,
+.right-player {
+  display: flex;
+  align-items: center;
+}
+.player-avatar {
+  position: relative;
+}
+.player-avatar::before {
+  content: "";
+  background: url(/assets/img/default-avatar.png);
+  background-size: 30px;
+  width: 30px;
+  height: 30px;
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  top: 4;
+  left: 5;
+}
+.player-avatar::after {
+  content: "";
+  background: url(/assets/img/default-avatar.png);
+  background-size: 30px;
+  width: 30px;
+  height: 30px;
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  bottom: 4;
+  left: 5;
+}
+.point > p {
+  font-weight: bold;
+}
+.score {
+  padding-bottom: 12px;
+}
+.score .point {
+  background-color: #ffc107;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+.left-player .score h4 {
+  color: #fff;
+  margin-left: 10px;
+}
+.left-player .score .point {
+  margin-left: auto;
+  text-align: center;
+}
+span.line {
+  background-color: #fff;
+  width: 8px;
+  height: 5px;
+  margin: auto;
+}
+.right-player .score h4 {
+  color: #fff;
+  margin-right: 10px;
+}
+.right-player .score .point {
+  margin-right: auto;
+  text-align: center;
+}
+/* --------------------------
+:: 2.2 Play CSS Start
+-------------------------- */
+.play-board {
+  margin: 60px auto;
+}
+.play-board .avatar.top {
+  margin-bottom: 15px;
+}
+.play-board .avatar.right {
+  margin-left: 15px;
+}
+.play-board .avatar.bottom {
+  margin-top: 15px;
+}
+.play-board .avatar.left {
+  margin-right: 15px;
+}
+.card-basic {
+  width: 72px;
 }
