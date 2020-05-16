@@ -82,7 +82,7 @@
 
     <!-- Main -->
     <div class="main">
-      <div class="container-fluid container-xl">
+      <div class="container-fluid container-xl d-flex flex-column justify-content-around">
         <!-- Score Board -->
         <div class="row">
           <div class="col">
@@ -119,31 +119,127 @@
         <!-- Play Board -->
         <div class="play-board">
           <div class="row">
-            <div class="col-12 col-md-8 mx-auto">
+            <div class="col-12 mx-auto">
               <div class="row align-items-center">
                 <div class="col">
                   <div class="d-flex align-items-center">
-                    <img src="/default-avatar.e63c0386.png" class="avatar left" alt="">
+                    <div id="player" class="left">
+                      <img src="/default-avatar.e63c0386.png" class="avatar" alt="">
+                      <div class="name">
+                        <p>Mohsin</p>
+                      </div>
+                    </div>
                     <img src="/card-basic.f9e88546.png" alt="" class="card-basic">
                   </div>
                 </div>
                 <div class="col d-flex flex-column">
                   <div class="d-flex align-items-center flex-column mb-2">
-                    <img src="/default-avatar.e63c0386.png" class="avatar top" alt="">
+                    <div id="player" class="top">
+                      <div class="name">
+                        <p>Mohsin</p>
+                      </div>
+                      <img src="/default-avatar.e63c0386.png" class="avatar" alt="">
+                    </div>
                     <img src="/card-basic.f9e88546.png" alt="" class="card-basic">
                   </div>
                   <div class="d-flex align-items-center flex-column-reverse mt-2">
-                    <img src="/default-avatar.e63c0386.png" class="avatar bottom" alt="">
+                    <div id="player" class="bottom">
+                      <img src="/default-avatar.e63c0386.png" class="avatar" alt="">
+                      <div class="name">
+                        <p>Mohsin</p>
+                      </div>
+                    </div>
                     <img src="/card-basic.f9e88546.png" alt="" class="card-basic">
                   </div>
                 </div>
                 <div class="col">
                   <div class="d-flex align-items-center flex-row-reverse">
-                    <img src="/default-avatar.e63c0386.png" class="avatar right" alt="">
+                    <div id="player" class="right selected">
+                      <img src="/default-avatar.e63c0386.png" class="avatar" alt="">
+                      <div class="name">
+                        <p>Mohsin</p>
+                      </div>
+                      <div class="selected-player">
+                        <img src="/selected-player-crown.d99d38f1.png" id="crown" alt="">
+                        <img src="/selected-player.3e5cc664.png" id="circle" alt="">
+                      </div>
+                    </div>
                     <img src="/card-basic.f9e88546.png" alt="" class="card-basic">
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card Preview -->
+        <div class="card-preview">
+          <div class="row">
+            <div class="col-4 col-md-2">
+              <div class="row align-items-center">
+                <div class="col">
+                  <div class="d-flex align-items-center">
+                    <img src="/light-wajik-2.e887acdb.png" alt="" class="card-basic">
+                  </div>
+                </div>
+                <div class="col d-flex flex-column">
+                  <div class="d-flex align-items-center flex-column mb-1">
+                    <img src="/light-wajik-1.584c068e.png" alt="" class="card-basic">
+                  </div>
+                  <div class="d-flex align-items-center flex-column-reverse">
+                    <img src="/light-wajik-1.584c068e.png" alt="" class="card-basic">
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="d-flex align-items-center flex-row-reverse selected">
+                    <img src="/light-wajik-2.e887acdb.png" alt="" class="card-basic">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card Deck -->
+        <div class="card-deck">
+          <div class="row mw-100">
+            <div class="col d-md-block d-none">
+              <img src="/light-kriting-1.fa848b21.png" alt="" class="card-basic">
+            </div>
+            <div class="col">
+              <img src="/light-kriting-1.fa848b21.png" alt="" class="card-basic">
+            </div>
+            <div class="col">
+              <img src="/light-kriting-1.fa848b21.png" alt="" class="card-basic">
+            </div>
+            <div class="col">
+              <img src="/light-kriting-2.13fed981.png" alt="" class="card-basic">
+            </div>
+            <div class="col">
+              <img src="/light-kriting-1.fa848b21.png" alt="" class="card-basic">
+            </div>
+            <div class="col">
+              <img src="/light-hati-1.4a1d0b6d.png" alt="" class="card-basic">
+            </div>
+            <div class="col">
+              <img src="/light-hati-1.4a1d0b6d.png" alt="" class="card-basic">
+            </div>
+            <div class="col d-md-block d-none">
+              <img src="/light-hati-1.4a1d0b6d.png" alt="" class="card-basic">
+            </div>
+            <div class="col d-md-block d-none">
+              <img src="/light-hati-1.4a1d0b6d.png" alt="" class="card-basic">
+            </div>
+            <div class="col d-md-block d-none">
+              <img src="/light-hati-1.4a1d0b6d.png" alt="" class="card-basic">
+            </div>
+            <div class="col">
+              <img src="/light-hati-2.7f5e75c2.png" alt="" class="card-basic">
+            </div>
+            <div class="col">
+              <img src="/light-waru-1.15cab756.png" alt="" class="card-basic">
+            </div>
+
+            <div class="col">
+              <img src="/light-waru-2.6db57dae.png" alt="" class="card-basic">
             </div>
           </div>
         </div>

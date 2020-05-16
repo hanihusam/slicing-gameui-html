@@ -605,22 +605,87 @@ span.line {
 :: 2.2 Play CSS Start
 -------------------------- */
 .play-board {
-  margin: 60px auto;
+  margin: 20px auto 0;
 }
-.play-board .avatar.top {
-  margin-bottom: 15px;
+.play-board .card-basic {
+  width: 60px;
 }
-.play-board .avatar.right {
-  margin-left: 15px;
+#player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.play-board .avatar.bottom {
-  margin-top: 15px;
-}
-.play-board .avatar.left {
+#player.left {
   margin-right: 15px;
 }
-.card-basic {
-  width: 72px;
+#player.top {
+  margin-bottom: 15px;
+}
+#player.right {
+  margin-left: 15px;
+}
+#player.bottom {
+  margin-top: 15px;
+}
+#player.left .name,
+#player.right .name,
+#player.bottom .name {
+  margin-top: 5px;
+}
+#player.top .name {
+  margin-bottom: 5px;
+}
+#player .name {
+  background-color: black;
+  opacity: 0.7;
+  border-radius: 5px;
+}
+#player .name p {
+  color: #fff;
+  font-size: 12px;
+  padding: 2px;
+  margin: 0;
+}
+.selected {
+  position: relative;
+}
+.selected-player {
+  position: absolute;
+  display: block;
+  top: -25;
+  right: 48;
+}
+.selected-player #crown {
+  position: absolute;
+  top: 0;
+  left: 10;
+  width: 30px;
+}
+.selected-player #circle {
+  position: absolute;
+  top: 28;
+  left: 13;
+  width: 24px;
+}
+/* --------------------------
+:: 2.3 Card Preview CSS Start
+-------------------------- */
+.card-preview {
+  margin-top: -60px;
+}
+.card-preview .card-basic {
+  width: 30px;
+}
+/* --------------------------
+:: 2.4 Card Deck CSS Start
+-------------------------- */
+.card-deck {
+  margin-top: 20px;
+  padding-bottom: 5px;
+  position: relative;
+}
+.card-deck .card-basic {
+  width: 50px;
 }
 
 

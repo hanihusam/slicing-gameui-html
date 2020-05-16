@@ -106,7 +106,9 @@
 
     <!-- Main -->
     <div class="main">
-      <div class="container-fluid container-xl">
+      <div
+        class="container-fluid container-xl d-flex flex-column justify-content-around"
+      >
         <!-- Score Board -->
         <div class="row">
           <div class="col">
@@ -143,15 +145,20 @@
         <!-- Play Board -->
         <div class="play-board">
           <div class="row">
-            <div class="col-12 col-md-8 mx-auto">
+            <div class="col-12 mx-auto">
               <div class="row align-items-center">
                 <div class="col">
                   <div class="d-flex align-items-center">
-                    <img
-                      src="./assets/img/default-avatar.png"
-                      class="avatar left"
-                      alt=""
-                    />
+                    <div id="player" class="left">
+                      <img
+                        src="./assets/img/default-avatar.png"
+                        class="avatar"
+                        alt=""
+                      />
+                      <div class="name">
+                        <p>Mohsin</p>
+                      </div>
+                    </div>
                     <img
                       src="./assets/img/card-basic.png"
                       alt=""
@@ -161,11 +168,16 @@
                 </div>
                 <div class="col d-flex flex-column">
                   <div class="d-flex align-items-center flex-column mb-2">
-                    <img
-                      src="./assets/img/default-avatar.png"
-                      class="avatar top"
-                      alt=""
-                    />
+                    <div id="player" class="top">
+                      <div class="name">
+                        <p>Mohsin</p>
+                      </div>
+                      <img
+                        src="./assets/img/default-avatar.png"
+                        class="avatar"
+                        alt=""
+                      />
+                    </div>
                     <img
                       src="./assets/img/card-basic.png"
                       alt=""
@@ -175,11 +187,16 @@
                   <div
                     class="d-flex align-items-center flex-column-reverse mt-2"
                   >
-                    <img
-                      src="./assets/img/default-avatar.png"
-                      class="avatar bottom"
-                      alt=""
-                    />
+                    <div id="player" class="bottom">
+                      <img
+                        src="./assets/img/default-avatar.png"
+                        class="avatar"
+                        alt=""
+                      />
+                      <div class="name">
+                        <p>Mohsin</p>
+                      </div>
+                    </div>
                     <img
                       src="./assets/img/card-basic.png"
                       alt=""
@@ -189,11 +206,28 @@
                 </div>
                 <div class="col">
                   <div class="d-flex align-items-center flex-row-reverse">
-                    <img
-                      src="./assets/img/default-avatar.png"
-                      class="avatar right"
-                      alt=""
-                    />
+                    <div id="player" class="right selected">
+                      <img
+                        src="./assets/img/default-avatar.png"
+                        class="avatar"
+                        alt=""
+                      />
+                      <div class="name">
+                        <p>Mohsin</p>
+                      </div>
+                      <div class="selected-player">
+                        <img
+                          src="/assets/img/selected-player-crown.png"
+                          id="crown"
+                          alt=""
+                        />
+                        <img
+                          src="/assets/img/selected-player.png"
+                          id="circle"
+                          alt=""
+                        />
+                      </div>
+                    </div>
                     <img
                       src="./assets/img/card-basic.png"
                       alt=""
@@ -202,6 +236,148 @@
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card Preview -->
+        <div class="card-preview">
+          <div class="row">
+            <div class="col-4 col-md-2">
+              <div class="row align-items-center">
+                <div class="col">
+                  <div class="d-flex align-items-center">
+                    <img
+                      src="./assets/img/card/light-wajik-2.png"
+                      alt=""
+                      class="card-basic"
+                    />
+                  </div>
+                </div>
+                <div class="col d-flex flex-column">
+                  <div class="d-flex align-items-center flex-column mb-1">
+                    <img
+                      src="./assets/img/card/light-wajik-1.png"
+                      alt=""
+                      class="card-basic"
+                    />
+                  </div>
+                  <div class="d-flex align-items-center flex-column-reverse">
+                    <img
+                      src="./assets/img/card/light-wajik-1.png"
+                      alt=""
+                      class="card-basic"
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div
+                    class="d-flex align-items-center flex-row-reverse selected"
+                  >
+                    <img
+                      src="./assets/img/card/light-wajik-2.png"
+                      alt=""
+                      class="card-basic"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card Deck -->
+        <div class="card-deck">
+          <div class="row mw-100">
+            <div class="col d-md-block d-none">
+              <img
+                src="/assets/img/card/light-kriting-1.png"
+                alt=""
+                class="card-basic"
+              />
+            </div>
+            <div class="col">
+              <img
+                src="/assets/img/card/light-kriting-1.png"
+                alt=""
+                class="card-basic"
+              />
+            </div>
+            <div class="col">
+              <img
+                src="/assets/img/card/light-kriting-1.png"
+                alt=""
+                class="card-basic"
+              />
+            </div>
+            <div class="col">
+              <img
+                src="/assets/img/card/light-kriting-2.png"
+                alt=""
+                class="card-basic"
+              />
+            </div>
+            <div class="col">
+              <img
+                src="/assets/img/card/light-kriting-1.png"
+                alt=""
+                class="card-basic"
+              />
+            </div>
+            <div class="col">
+              <img
+                src="/assets/img/card/light-hati-1.png"
+                alt=""
+                class="card-basic"
+              />
+            </div>
+            <div class="col">
+              <img
+                src="/assets/img/card/light-hati-1.png"
+                alt=""
+                class="card-basic"
+              />
+            </div>
+            <div class="col d-md-block d-none">
+              <img
+                src="/assets/img/card/light-hati-1.png"
+                alt=""
+                class="card-basic"
+              />
+            </div>
+            <div class="col d-md-block d-none">
+              <img
+                src="/assets/img/card/light-hati-1.png"
+                alt=""
+                class="card-basic"
+              />
+            </div>
+            <div class="col d-md-block d-none">
+              <img
+                src="/assets/img/card/light-hati-1.png"
+                alt=""
+                class="card-basic"
+              />
+            </div>
+            <div class="col">
+              <img
+                src="/assets/img/card/light-hati-2.png"
+                alt=""
+                class="card-basic"
+              />
+            </div>
+            <div class="col">
+              <img
+                src="/assets/img/card/light-waru-1.png"
+                alt=""
+                class="card-basic"
+              />
+            </div>
+
+            <div class="col">
+              <img
+                src="/assets/img/card/light-waru-2.png"
+                alt=""
+                class="card-basic"
+              />
             </div>
           </div>
         </div>
