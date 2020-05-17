@@ -13,6 +13,7 @@ body {
   color: #2222;
   background-color: #ffffff;
   font-size: 14px;
+  overflow: hidden;
 }
 body > * {
   overflow-x: hidden;
@@ -56,6 +57,9 @@ label {
   font-size: 14px;
   color: #232323;
 }
+.wrapper {
+  display: flex;
+}
 
 /* --------------------------
 :: 1.0 Navbar CSS Start
@@ -63,6 +67,7 @@ label {
 .navbar {
   padding: 0 0.3rem;
   flex-wrap: nowrap;
+  z-index: 2;
 }
 .navbar-brand > img {
   width: 120px;
@@ -136,7 +141,7 @@ nav ul {
   transform: translateX(100%);
   transition: all 1s;
   opacity: 0;
-  z-index: -1;
+  z-index: -2;
   padding-top: 60px;
 }
 nav ul.slide {
@@ -168,6 +173,19 @@ nav ul .nav-item {
 }
 .main .logo {
   width: 50px;
+}
+.outside {
+  position: relative;
+}
+.outside input {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  left: 0px;
+  top: 4px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 5;
 }
 /* --------------------------
 :: 2.1 Score Board CSS Start
@@ -332,7 +350,185 @@ span.line {
   margin-top: 20px;
   padding-bottom: 5px;
   position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  max-width: 100%;
+}
+.card-deck .card-item {
+  max-width: 100%;
+  flex-basis: 0;
+  min-width: 0;
+  flex-grow: 1;
 }
 .card-deck .card-basic {
+  width: 40px;
+}
+
+/* --------------------------
+:: 3.0 Chat Room CSS Start
+-------------------------- */
+.square {
+  display: none;
+}
+.square .chat-btn input {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  left: -5px;
+  top: -3px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 5;
+}
+.chat-room {
+  display: none;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  transform: translateX(100%);
+  transition: all 1s;
+  opacity: 1;
+  z-index: 1;
+}
+.chat-room.slide {
+  display: flex;
+  transform: translateX(0);
+}
+.chat-board {
+  background-color: #fff;
+  width: 100%;
+  min-height: 100vh;
+  margin-left: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 70px 0 10px;
+  box-sizing: border-box;
+  position: relative;
+}
+.chat-btn {
+  display: flex;
+  flex-direction: column;
+  height: 25px;
+  justify-content: space-between;
+  position: relative;
+}
+.chat-btn span {
+  display: block;
+  width: 20px;
+  height: 5px;
+  background-color: #07a72f;
+  border-radius: 3px;
+  transition: all 500ms;
+}
+.chat-board .spectator {
+  border-bottom: 1px solid #ced4da;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.chat-board .spectator .head {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.chat-board .spectator .head .line {
+  height: 1px;
+  background-color: #ced4da;
+  width: 30%;
+}
+.chat-board .spectator .list {
+  margin: 10px auto;
+  display: flex;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 5px 10px;
+  background-color: #ced4da;
+  border-radius: 10px;
+  width: 90%;
+  height: 100px;
+  flex-direction: column;
+}
+.chat-board .spectator .list p {
+  font-size: 12px;
+}
+.chat-board .spectator .list img {
+  width: 20px;
+  height: 20px;
+}
+.chat-board .chat {
+  margin-top: 15px;
+  width: 100%;
+  flex-grow: 5;
+  display: flex;
+  flex-direction: column;
+}
+.chat .head {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.chat .head .line {
+  height: 1px;
+  background-color: #ced4da;
+  width: 30%;
+}
+.chat .room {
+  display: flex;
+  flex-direction: column;
+}
+.chat .room .cloud {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+.chat .room .cloud.reverse {
+  flex-direction: row-reverse;
+}
+.chat .room .cloud .avatar {
   width: 50px;
+  height: 50px;
+}
+.chat .room .cloud .text {
+  display: flex;
+  align-items: center;
+  background-color: #ced4da;
+  height: 50px;
+  margin-left: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+  flex: 1;
+  border-radius: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.chat .room .cloud.reverse .text {
+  margin-right: 20px;
+  margin-left: 0;
+}
+.chat .room .cloud.reverse .text p {
+  margin-left: auto;
+  text-align: right;
+}
+.chat-board .chat-form {
+  position: relative;
+}
+.chat-form .input-group {
+  padding: 5px 10px;
+}
+.chat-form input {
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-right: none;
+}
+.chat-form .input-group-prepend > .btn {
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border: 1px solid #ced4da;
+  border-left: none;
 }
