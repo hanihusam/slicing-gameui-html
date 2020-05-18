@@ -17,3 +17,12 @@ squareToggle.addEventListener("click", () => {
 navChatToggle.addEventListener("click", () => {
   chatRoom.classList.toggle("slide");
 });
+
+// Dark/Light mode toggle
+const darkModeToggle = document.querySelector("#dark input");
+
+darkModeToggle.addEventListener("click", () => {
+  // Main background
+  document.querySelector(".main").classList.toggle("dark");
+  document.querySelector(".chat-room").classList.toggle("dark");
+});

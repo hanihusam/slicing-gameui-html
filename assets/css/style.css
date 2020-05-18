@@ -522,6 +522,9 @@ span.line {
 .chat-form .input-group {
   padding: 5px 10px;
 }
+.chat-form .form-control {
+  background-color: transparent;
+}
 .chat-form input {
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
@@ -624,4 +627,45 @@ input:checked + .slider:before {
 }
 .list-group .list-group-item {
   border-width: 0;
+}
+
+/* DARK MODE */
+.main.dark {
+  background: url(../img/dark-bg.png) no-repeat;
+}
+.main.dark .logo {
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+  padding-left: 50px;
+  background: url(/assets/img/dark-logo.png) left top no-repeat;
+  background-size: cover;
+}
+.main.dark .score-board img {
+  width: 40px;
+  height: 95px;
+  box-sizing: border-box;
+  padding-left: 40px;
+  background: url(/assets/img/dark-score.png) left top no-repeat;
+  background-size: cover;
+}
+
+.chat-room.dark .chat-board,
+.chat-room.dark .square {
+  background-color: #232323;
+}
+.chat-room.dark .square .chat-btn span {
+  background-color: #343a40;
+}
+.chat-room.dark .chat-board .list {
+  background-color: #343a40;
+}
+.chat-room.dark .chat-board .list p {
+  color: #fff;
+}
+.chat-room.dark .chat-board .cloud .text {
+  background-color: #343a40;
+}
+.chat-room.dark .chat-board .cloud p {
+  color: #fff;
 }

@@ -133,6 +133,13 @@ squareToggle.addEventListener("click", function () {
 });
 navChatToggle.addEventListener("click", function () {
   chatRoom.classList.toggle("slide");
+}); // Dark/Light mode toggle
+
+var darkModeToggle = document.querySelector("#dark input");
+darkModeToggle.addEventListener("click", function () {
+  // Main background
+  document.querySelector(".main").classList.toggle("dark");
+  document.querySelector(".chat-room").classList.toggle("dark");
 });
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -162,7 +169,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56838" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64115" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
