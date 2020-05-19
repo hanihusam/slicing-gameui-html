@@ -130,9 +130,11 @@ var navChatToggle = document.querySelector(".outside input");
 var chatRoom = document.querySelector(".chat-room");
 squareToggle.addEventListener("click", function () {
   chatRoom.classList.toggle("slide");
+  document.querySelector(".main").classList.toggle("slide");
 });
 navChatToggle.addEventListener("click", function () {
   chatRoom.classList.toggle("slide");
+  document.querySelector(".main").classList.toggle("slide");
 }); // Dark/Light mode toggle
 
 var darkModeToggle = document.querySelector("#dark input");
@@ -140,6 +142,7 @@ darkModeToggle.addEventListener("click", function () {
   // Main background
   document.querySelector(".main").classList.toggle("dark");
   document.querySelector(".chat-room").classList.toggle("dark");
+  document.querySelector(".modal").classList.toggle("dark");
 });
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];

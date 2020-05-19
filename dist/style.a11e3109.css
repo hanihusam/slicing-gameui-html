@@ -411,6 +411,8 @@ label {
 }
 .wrapper {
   display: flex;
+  width: 100%;
+  align-items: stretch;
 }
 
 /* --------------------------
@@ -521,7 +523,8 @@ nav ul .nav-item {
   top: 0;
   left: 0;
   right: 0;
-  z-index: -2;
+  z-index: 1;
+  transition: all 1s;
 }
 .main .logo {
   width: 50px;
@@ -898,6 +901,9 @@ span.line {
   text-transform: uppercase;
   color: #ffc107;
 }
+.modal-content {
+  border-radius: 7%;
+}
 .modal-header {
   border-bottom: none;
 }
@@ -1018,6 +1024,14 @@ input:checked + .slider:before {
   background-color: #343a40;
 }
 .chat-room.dark .chat-board .cloud p {
+  color: #fff;
+}
+
+.modal.dark .modal-content,
+.modal.dark .modal-content .list-group-item {
+  background-color: #232323;
+}
+.modal.dark .modal-content .list-group-item > span {
   color: #fff;
 }
 
